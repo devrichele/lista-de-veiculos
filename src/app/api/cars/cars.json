@@ -1,0 +1,83 @@
+[
+    {
+      "model": "Fiat Pulse",
+      "version": "Audace 1.3 Automático (Flex)",
+      "price": "R$ 98.390,00",
+      "image": "https://picsum.photos/300/200?random=1",
+      "seller": {
+        "name": "LOCALIZA Seminovos",
+        "location": "São Paulo - SP",
+        "date": "28/02/2024",
+        "contact": {
+          "name": "Mariana Souza",
+          "email": "contato@localiza.com",
+          "phone": "(11) 98765-4321"
+        }
+      }
+    },
+    {
+      "model": "Peugeot 208",
+      "version": "Allure 1.6 Automático (Flex)",
+      "price": "R$ 74.990,00",
+      "image": "https://picsum.photos/300/200?random=2",
+      "seller": {
+        "name": "LOCALIZA Seminovos",
+        "location": "São Paulo - SP",
+        "date": "28/02/2024",
+        "contact": {
+          "name": "Roberto Lima",
+          "email": "contato@localiza.com",
+          "phone": "(11) 98765-4321"
+        }
+      }
+    },
+    {
+      "model": "Hyundai HB20",
+      "version": "Sense 1.0 Automático (Flex)",
+      "price": "R$ 71.790,00",
+      "image": "https://picsum.photos/300/200?random=3",
+      "seller": {
+        "name": "LOCALIZA Seminovos",
+        "location": "São Paulo - SP",
+        "date": "28/02/2024",
+        "contact": {
+          "name": "Fernanda Ribeiro",
+          "email": "contato@localiza.com",
+          "phone": "(11) 98765-4321"
+        }
+      }
+    },
+    {
+      "model": "Ford EcoSport",
+      "version": "1.5 SE Automático (Flex)",
+      "price": "R$ 60.000,00",
+      "image": "https://picsum.photos/300/200?random=4",
+      "seller": {
+        "name": "Vendedor particular",
+        "location": "São Paulo - SP",
+        "date": "28/02/2024",
+        "contact": {
+          "name": "Carlos Mendes",
+          "email": "eco_vendedor@email.com",
+          "phone": "(11) 91234-5678"
+        }
+      }
+    },
+    {
+      "model": "Fiat Pulse",
+      "version": "Turbo 1.3 Automático (Flex)",
+      "price": "R$ 127.600,00",
+      "image": "https://picsum.photos/300/200?random=5",
+      "seller": {
+        "name": "Vendedor particular",
+        "location": "São Paulo - SP",
+        "date": "28/02/2024",
+        "contact": {
+          "name": "Juliana Santos",
+          "email": "pulse_vendedor@email.com",
+          "phone": "(11) 92345-6789"
+        }
+      }
+    }
+  ]
+  
