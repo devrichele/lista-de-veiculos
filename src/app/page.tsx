@@ -13,85 +13,35 @@ const formatCurrency = (value: number) => {
 };
 
 export default function Home() {
-  // const listaDeCarros = [
-  //   {
-  //     titulo: "Volkswagen",
-  //     descrição: "Conquistar e Gerir Meu Veículo",
-  //     valor: 79000,
-  //     imagem: "https://picsum.photos/600",
-  //     data: "2021/2022",
-  //     localização: "São Paulo, SP",  
-  //     vendedor: {
-  //       nome: "Melyssa",
-  //       email: "melyssa@teste",
-  //       telefone:"1234-1234",
-  //     }
-      
-  //   },
-  //   {
-  //     titulo: "Fiat",
-  //     descrição: "Conquistar e Gerir Meu Veículo",
-  //     valor: 55000,
-  //     imagem: "https://picsum.photos/600",
-  //     data: "2021/2023",
-  //     localização: "Matões, MA",
-  //     vendedor: {
-  //       nome: "Brenda",
-  //       email: "brenda@teste",
-  //       telefone:"1234-1234",
-  //     }
-      
-  //   },
-  //   {
-  //     titulo: "Ford",
-  //     descrição: "Conquistar e Gerir Meu Veículo",
-  //     valor: 75000,
-  //     imagem: "https://picsum.photos/600",
-  //     data: "2021/2023",
-  //     localização: "Belo Horizonte, MG",  
-  //     vendedor: {
-  //       nome: "Brenda",
-  //       email: "brenda@teste",
-  //       telefone:"1234-1234",
-  //     }
-      
-  //   },
-  //   {
-  //     titulo: "Volvo",
-  //     descrição: "Conquistar e Gerir Meu Veículo",
-  //     valor: 34000,
-  //     imagem: "https://picsum.photos/600",
-  //     data: "2024/2025",
-  //     localização: "Curitiba, PR",
-  //     vendedor: {
-  //       nome: "Brenda",
-  //       email: "brenda@teste",
-  //       telefone:"1234-1234",
-  //     }
-      
 
-  //   },
-  // ];
 
   const [searchValue, setSearchValue] = useState('');
   const [contato, setContato] = useState(false);
-  const [vendedor, setVendedor] = useState<null | any >(null);
-  const[data, setData] = useState<any[]>([]);
+  const [vendedor, setVendedor] = useState<null | any>(null);
+  const [data, setData] = useState<any[]>([]);
+  const [dataOriginal, setDataOriginal] = useState <any[]>([])
+  
 
   const getCars = async () =>{
     const response = await fetch('/api/cars');
     const dataResponse = await response.json();
     
     setData(dataResponse);
+    setDataOriginal(dataResponse);
   };
 
   useEffect(() => {
     getCars();
   }, []);
 
- useEffect(()=> {
-  const listaDeCarrosFiltrada = data.filter((item) => item.model.toLowerCase().includes(searchValue.toLowerCase()));
-  setData(listaDeCarrosFiltrada);
+  useEffect(() => {
+    if (searchValue.trim() === '') {
+      setData(dataOriginal);
+
+    } else {
+     const listaDeCarrosFiltrada = data.filter((item) => item.model.toLowerCase().includes(searchValue.toLowerCase()));
+      setData(listaDeCarrosFiltrada);
+    }
  }, [searchValue])
   
   function botaoContato (item:any){
@@ -100,7 +50,7 @@ export default function Home() {
     }
     
   return (
-    <div>
+    <div className="">
       <div className="container mx-auto px-4 py-8 max-w-6xl">
           <div className="flex justify-between items-center">
           <h1 className="text-orange-500 font-bold">Icarros</h1>
